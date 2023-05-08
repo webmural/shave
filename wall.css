@@ -1,0 +1,140 @@
+@media (color) {
+  @supports (box-shadow: none) {
+    :focus {
+      box-shadow: 0 0 0 .2rem var(--tape-hex, currentColor);
+      outline: none;
+    }
+  }
+
+  ::selection {
+    background: darkviolet;
+    color: whitesmoke;
+  }
+
+  .swatch .sh,
+  #swatch:target ~ * .sh {
+    color: transparent !important;
+  }
+
+  /*
+  be tape my friend
+  s9a.github.io/tape
+  */
+  :root {
+    --tape-white: #f5f5f5;
+    --tape-black: #090909;
+    --tape-pink: #fbbfff;
+    --tape-yellow: #eee833;
+    --tape-blue: #11dff1;
+    --tape-green: #44f477;
+  }
+  .tape-white { --tape-hex: var(--tape-white) }
+  .tape-blue { --tape-hex: var(--tape-blue) }
+  .tape-pink { --tape-hex: var(--tape-pink) }
+  .tape-green { --tape-hex: var(--tape-green) }
+  .tape-yellow { --tape-hex: var(--tape-yellow) }
+  .tape-clean:not(.tape-unclean),
+  .tape-clean :not(.tape-unclean) {
+    background: transparent;
+    color: inherit }
+  .tape-flat:not(.tape-unflat),
+  .tape-flat :not(.tape-unflat) {
+    border-color: transparent }
+  .tape-blue,
+  .tape-pink,
+  .tape-green,
+  .tape-yellow,
+  .tape-white {
+    background: var(--tape-hex) !important;
+    color: var(--tape-black) !important;
+  }
+  .tape-black {
+    background: var(--tape-black) !important;
+    color: var(--tape-hex, var(--tape-white)) !important;
+  }
+}
+
+:root {
+  --tape-white: #cdcdcd;
+  font-family: sans-serif;
+  font-size: calc(1em + 2vmin);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.stage {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+}
+
+.adore {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-size: calc(2vw + 1vh);
+  min-height: 100vh;
+  min-width: 100%;
+  margin: auto;
+}
+
+.adored {
+  line-height: 5;
+  padding: 1rem;
+  flex: 0 1 auto;
+  margin: auto;
+}
+
+.about {
+  order: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-inline-start: 18%;
+  padding-inline-end: 18%;
+  min-height: 100vh;
+  min-width: 100%;
+  line-height: 1.5;
+}
+
+.sh {
+  border-radius: 50% 30%;
+  display: inline-block;
+  line-height: normal;
+  font-size: 2em;
+  font-weight: bold;
+  padding: .5rem;
+  text-decoration: none;
+}
+
+.sh:focus,
+.sh:hover {
+  text-decoration: underline;
+}
+
+.shame {
+  border-radius: 50% 30%;
+  padding: 1rem;
+}
+
+.opener {
+  order: -1;
+}
+
+[hidden] {
+  display: none;
+}
